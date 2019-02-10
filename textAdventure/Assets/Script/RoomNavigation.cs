@@ -19,16 +19,30 @@ public class RoomNavigation : MonoBehaviour
         }
     }
 
-    public void AttemptToChangeRooms(string directionNoun) {
-        if (exitDictionary.ContainsKey(directionNoun))
-        {
-            currentRoom = exitDictionary[directionNoun];
-            controller.LogStringWithReturn("You changed" + directionNoun);
-            controller.DisplayRoomText();
-        }
-        else {
-            controller.LogStringWithReturn("oh well" + directionNoun+"looks weird answer to me,are you sure about that?");
+    public void AttemptToChangeRooms(string[] directionNoun)
+    {
 
+        foreach (KeyValuePair<string, Room> check in exitDictionary)
+        {
+            string checkword = check.Key;
+
+            for (int i = 0; i < directionNoun.Length; i++)
+            {
+                if (checkword.Contains(directionNoun[i]))
+                {
+                    if (exitDictionary.ContainsKey(directionNoun[i]))
+                    {
+                        currentRoom = exitDictionary[directionNoun[i]];
+                        // controller.LogStringWithReturn("You changed" + directionNoun);
+                        controller.DisplayRoomText();
+                    }
+                }
+                else
+                {
+                    controller.LogStringWithReturn("oh well " + directionNoun[i] + "looks weird answer to me,are you sure about that?");
+
+                }
+            }
         }
     }
     public void ClearExits() {

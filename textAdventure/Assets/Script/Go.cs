@@ -7,6 +7,6 @@ using UnityEngine;
 public class Go : InputAction
 {
     public override void RespondToInput(GameControlller controller, string[] separatedInputWords) {
-        controller.roomNavigation.AttemptToChangeRooms(separatedInputWords[1]);
+     //   controller.roomNavigation.AttemptToChangeRooms(separatedInputWords[0]);
     }
 }

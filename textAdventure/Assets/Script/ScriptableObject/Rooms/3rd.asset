@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa0fed1f83a045949ae422abf821630a, type: 3}
+  m_Name: 3rd
+  m_EditorClassIdentifier: 
+  desp: Let's Start with Simple CS questions
+  roomName: You Good?
+  exits:
+  - keyString: yes
+    exitDesc: 
+    valueRoom: {fileID: 11400000, guid: 31d4a4213dbaf1f40978d62fb397a871, type: 2}
+  - keyString: no
+    exitDesc: 
+    valueRoom: {fileID: 11400000, guid: ed637f3680f3cc447882320010a2a4af, type: 2}
