@@ -1,3 +1,3 @@
 # HexaHiveHack
 
-website: www.strawhats.tk
+website: www.straw-hats.tech
